@@ -36,8 +36,8 @@ console.log(food, "is my favorite food");
 
 // 8 - Create a variable called `pets` and set it to the value of the number of pets you have
 //     Console log the value of `pets`
-let pets = 0;
-console.log("I have", pets, "pets");
+let pets = 1;
+console.log("Pets are:", pets);
 
 // 9 - Create a variable called `friendsPets` and assign it the value of the number of pets your friend has
 let friendsPets = 2;
@@ -61,12 +61,19 @@ if (adventurous === true) {
 } else {
   result = "How about we stay home?";
 }
+console.log(result);
 
 // 13 - Create a variable called `diceRoll` and set it to the value of "Try again later.".
 //      Create a compound conditional:
 //      if luckyNumber is 2 and adventurous is true,
 //      set `diceRoll` to be "Roll the dice!"
 //      Console log the value of `diceRoll`
+let diceRoll = "Try again later.";
+
+if (luckyNumber === 2 && adventurous === true) {
+  diceRoll = "Roll the dice!";
+}
+console.log(diceRoll);
 
 // 14 - Create a variable called `petStatus`.
 //      Write a conditional that covers the following:
@@ -76,6 +83,17 @@ if (adventurous === true) {
 //      set `petStatus` to the value of "I have enough pets"
 //      if the value of `pets` is greater than the value of `allowedPets`.
 //      set `petStatus` to the value of "Oh no, I have too many pets!"
+let petStatus;
+
+if (pets < allowedPets) {
+  petStatus = "I can have more pets";
+} else if (pets === allowedPets) {
+  petStatus = "I have enough pets";
+} else if (pets > allowedPets) {
+  petStatus = "Oh no, I have too many pets!";
+}
+
+console.log(petStatus);
 
 // STRETCH GOALS:
 
@@ -85,6 +103,18 @@ if (adventurous === true) {
 //      be sure to think through all the scenarios.
 //      console.log `mostPets` after the conditional has run.
 
+let mostPets;
+
+if (pets === friendsPets) {
+  mostPets = "Same number of pets as your friends.";
+} else if (pets < friendsPets) {
+  mostPets = friendsPets;
+} else if (pets > friendsPets) {
+  mostPets = pets;
+}
+
+console.log(mostPets);
+
 // 16 - Make a variable called `luckyResult`
 //      Write a *switch* statement that sets `luckyResult` to:
 //      "First is the worst" if your lucky number is 1
@@ -93,6 +123,22 @@ if (adventurous === true) {
 //      Otherwise, "Luck is what happens when preparation meets opportunity"
 //      You'll need to research how to use switch statements!
 //      console.log `luckyResult` after the conditional has run.
+let luckyResult;
+
+switch (luckyNumber) {
+  case 1:
+    luckyResult = "First is the worst";
+    break;
+  case 2:
+    luckyResult = "Second is the best";
+    break;
+  case 3:
+    luckyResult = "Third is the one with the polka dot dress";
+    break;
+  default:
+    luckyResult = "Luck is what happens when preparation meets opportunity";
+}
+console.log(luckyResult);
 
 // 17 -- Rewrite question 12 with a `ternary` operator. You'll need to do research!
 
